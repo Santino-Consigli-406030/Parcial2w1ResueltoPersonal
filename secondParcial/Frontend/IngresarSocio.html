@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" integrity="sha384-dpuaG1suU0eT09tx5plTaGMLBsfDLzUCCUXOY2j/LSvXYuG6Bqs43ALlhIqAJVRb" crossorigin="anonymous">
+    <title>Alta de Socio</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+              <a class="navbar-brand" href="IngresarSocio.html">Alta de Socio</a>
+              <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                  <a class="nav-link" href="listadoSocios.html">Listado de Socios<span class="sr-only"></span></a>
+                </li>
+              </ul>           
+            </div>
+          </nav>
+    </div>
+    <div class="container py-5">
+        <div class="row  d-flex justify-content-center align-items-center vh-100">
+            <div class=" container  col-lg-6  col-md-8 col-10  col-sm-8  border border-dark rounded-3">           
+                    <div class="card-body p-md-5">
+                        <h3 class="mb-4 mt-3 my-0 pb-md-0 text-center ">Alta de Socio</h3>
+                        <form>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label class="form-label" >Email</label>
+                                        <input type="text" class="form-control" id="email" class=""name="email">
+                                    </div>
+                                </div>
+                    
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label class="form-label">Nombre</label>
+                                        <input type="text" class="form-control " id="nombre" name="nombre">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label class="form-label">Apellido</label>
+                                        <input type="text" class="form-control " id="apellido" name="apellido">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group mb-4">
+                                        <label class="form-label">DNI</label>
+                                        <input type="text" class="form-control " id="dni" name="dni">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-3">
+                                    <div class="form-group mb-4">
+                                        <label for="deporteId">Deporte:</label>
+                                        <select class="form-control" id="deporteId" name="deporteId"></select>                
+                                    </div>
+                                </div>
+                            
+                            </div>
+                             <div class="row">
+                                <div class="col-3">
+                                    <div class="form-group mb-4">
+                                        <label for="numeroId">Numero:</label>
+                                        <input type="text" class="form-control " id="numero" name="numero">
+                                    </div>
+                                </div>
+                                  <div class="col-3">
+                                    <div class="form-group mb-4">
+                                        <label for="numeroId">Cod postal:</label>
+                                        <input type="text" class="form-control " id="codPostal" name="codPostal">
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="form-group mb-4">
+                                        <label for="numeroId">Provincia:</label>
+                                        <input type="text" class="form-control" id="provincia" name="provincia">
+                                    </div>
+                                </div>
+                             </div>
+                             <div class="row">
+                                <div class="col-3">
+                                    <div class="form-group mb-4">
+                                        <label for="numeroId">Ciudad:</label>
+                                        <input type="text" class="form-control " id="ciudad" name="ciudad">
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="form-group mb-4">
+                                        <label for="telefonoId">Telefono:</label>
+                                        <input type="text" class="form-control" id="telefono" name="telefono">  
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="form-group mb-4">
+                                        <label for="calleId">Calle:</label>
+                                        <input type="text" class="form-control " id="calle" name="calle">
+                                        
+                                    </div>
+                                </div>
+                                
+                             </div>
+                            <div class="row">
+                                <div class="col-12 text-center pb-4">
+                                    <button type="submit" class="btn btn-primary col-12 mb-4">Guardar</button>
+
+                                </div>
+                            </div>
+                            
+                        </form>
+                    </div>
+                
+            </div>
+        </div>
+    </div>
+      </section>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
+<script>
+    fetch('https://localhost:7222/api/Parcial/getAllDeportes',{
+        method:'GET'
+    })
+    .then(response=>{
+        if(response.ok)
+    {
+        return response.json();
+    }
+    else{
+        throw new Error('El servidor no pudo resolver la peticion de todos los deportes')
+    }
+    })
+    .then(deportes=>{
+        const selectDeportes = document.querySelector("#deporteId")
+         deportes.forEach(deporte => {
+            var newSelectOption = document.createElement("option");
+        newSelectOption.value = deporte.id;
+        newSelectOption.text = deporte.nombre;
+        selectDeportes.appendChild(newSelectOption)   
+        });
+    })
+
+    $(document).ready(function(){
+        $("form").validate({
+            rules:{
+                email:{
+                    required:true
+                },
+                nombre:{
+                    required:true
+                },
+                apellido:{
+                    required:true
+                },
+                dni:{
+                    required:true
+                },
+                deporte:{
+                    required:true
+                }
+            },
+            messages:{
+                email:{
+                    required:"Debe ingresar el campo"
+                },
+                nombre:{
+                    required:"Debe ingresar el campo"
+                },
+                apellido:{
+                    required:"Debe ingresar el campo"
+                },
+                dni:{
+                    required:"Debe ingresar el campo"
+                },
+                deporte:{
+                    required:"Debe ingresar el campo"
+                },
+            },
+            submitHandler: function(form,event){
+             event.preventDefault() 
+                var datosForm = $("form").serializeArray()
+                var nuevoSocio = {}; 
+
+             datosForm.forEach(function(field) 
+             {
+                nuevoSocio[field.name] = field.value;
+              });
+              const selectDeportes = document.querySelector("#deporteId")
+              nuevoSocio.idDeporte = selectDeportes.value
+             var jsonNuevoSocio = JSON.stringify(nuevoSocio);
+             fetch('https://localhost:7222/api/Parcial/postOne',{
+                method:"POST",
+                headers: {
+                    'Content-Type': 'application/json',
+                 },
+                 body: jsonNuevoSocio
+             })
+             .then(response=>{
+                if(response.ok)
+             {
+                return response.json()
+                alert("Felicidades, pudo ingresar el socio")
+             }
+             else{
+                throw new Error("No pudo ingresar correctamente el socio")
+             }
+             })  
+            .then(data=>{
+                    console.log(data)
+            })
+
+                var nombreSocio = document.getElementById("nombre").value
+                console.log(nombreSocio)
+                var apellidoSocio = document.getElementById("apellido").value
+                var dni = document.getElementById("dni").value
+                localStorage.setItem("nombreSocio", nombreSocio);
+                localStorage.setItem("apellidoSocio", apellidoSocio);
+                localStorage.setItem("dni", dni);
+            }
+          
+            
+        })
+        
+    })
+</script>
+</body>
+</html>
