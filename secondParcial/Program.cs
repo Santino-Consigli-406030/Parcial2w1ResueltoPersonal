@@ -1,6 +1,10 @@
+using FluentValidation;
+using FluentValidation.AspNetCore;
 using Microsoft.EntityFrameworkCore;
 using secondParcial.Contexto;
+using secondParcial.DTOS;
 using secondParcial.Repositories;
+using secondParcial.Validators;
 using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,9 +15,11 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddFluentValidation((options) =>
+    options.RegisterValidatorsFromAssembly(Assembly.GetExecutingAssembly())
+);
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 builder.Services.AddTransient<IDBRepositoryClub,DBRepositoryClub>();
-
 builder.Services.AddDbContext<ClubContext>((context) =>
 {
     context.UseSqlServer(builder.Configuration.GetConnectionString("UserConnectionStrings"));

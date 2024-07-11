@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "ExxYtzj/GBb6o9eq1SiFdH/p9QYXetCXh9QHn7H3PGd6+8IMcoNCf/Jw6qKfwaVrpvQHwPJ0KJvEp3/nqY5cxg==",
+  "dgSpecHash": "QqBl++BvpVxvr4yr/ylhEosIjKKB3iKVIak2H4HtR9IiohGJ7V3bXAwNRFtkY4qsw0c2ykhN7bab/FImSCNuKA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Santino\\Desktop\\Facultad2024\\ProgramacionIII\\dataPracticaParcia2PrograIII\\second-exam-practica\\secondParcial\\secondParcial.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Santino\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
+    "C:\\Users\\Santino\\.nuget\\packages\\fluentvalidation\\11.5.1\\fluentvalidation.11.5.1.nupkg.sha512",
+    "C:\\Users\\Santino\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.0\\fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
+    "C:\\Users\\Santino\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.5.1\\fluentvalidation.dependencyinjectionextensions.11.5.1.nupkg.sha512",
     "C:\\Users\\Santino\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Santino\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\Santino\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.7\\microsoft.data.sqlclient.2.1.7.nupkg.sha512",

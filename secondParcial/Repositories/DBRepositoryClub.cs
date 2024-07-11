@@ -67,9 +67,9 @@ namespace secondParcial.Repositories
 
             return socioResponse;
         }
-        public Task<List<Deporte>> GetAllDeportesAsync()
+        public async Task<List<Deporte>> GetAllDeportesAsync()
         {
-            var deportes = _clubContext.Deportes.ToListAsync();
+            var deportes = await _clubContext.Deportes.ToListAsync();
             return deportes;
         }
 

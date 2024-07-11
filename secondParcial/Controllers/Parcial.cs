@@ -39,13 +39,7 @@ namespace secondParcial.Controllers
 
             return Ok(response);
         }
-       /* [HttpGet("getByidSocioBaloncesto/{id}")]
-        public async Task<IActionResult> GetByIdSocioBaloncesto(Guid id)
-        {
-
-            var response = await _dbRepositoryClub.GetByIdSocioBaloncestoAsync( id);
-            return Ok(response);
-        }*/
+ 
         [HttpGet("getAllSocios")]
         public async Task<IActionResult> GetAllSocios()
         {

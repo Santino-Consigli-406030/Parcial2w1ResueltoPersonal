@@ -197,3 +197,7 @@ C:\Users\Santino\Desktop\Facultad2024\ProgramacionIII\dataPracticaParcia2PrograI
 C:\Users\Santino\Desktop\Facultad2024\ProgramacionIII\dataPracticaParcia2PrograIII\second-exam-practica\secondParcial\obj\Debug\net8.0\secondParcial.pdb
 C:\Users\Santino\Desktop\Facultad2024\ProgramacionIII\dataPracticaParcia2PrograIII\second-exam-practica\secondParcial\obj\Debug\net8.0\secondParcial.genruntimeconfig.cache
 C:\Users\Santino\Desktop\Facultad2024\ProgramacionIII\dataPracticaParcia2PrograIII\second-exam-practica\secondParcial\obj\Debug\net8.0\ref\secondParcial.dll
+C:\Users\Santino\Desktop\Facultad2024\ProgramacionIII\dataPracticaParcia2PrograIII\second-exam-practica\secondParcial\bin\Debug\net8.0\FluentValidation.dll
+C:\Users\Santino\Desktop\Facultad2024\ProgramacionIII\dataPracticaParcia2PrograIII\second-exam-practica\secondParcial\bin\Debug\net8.0\FluentValidation.AspNetCore.dll
+C:\Users\Santino\Desktop\Facultad2024\ProgramacionIII\dataPracticaParcia2PrograIII\second-exam-practica\secondParcial\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\Santino\Desktop\Facultad2024\ProgramacionIII\dataPracticaParcia2PrograIII\second-exam-practica\secondParcial\obj\Debug\net8.0\secondParcial.sourcelink.json
