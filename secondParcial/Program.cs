@@ -3,7 +3,8 @@ using FluentValidation.AspNetCore;
 using Microsoft.EntityFrameworkCore;
 using secondParcial.Contexto;
 using secondParcial.DTOS;
-using secondParcial.Repositories;
+using secondParcial.Repositories.Impl;
+using secondParcial.Repositories.Interfaces;
 using secondParcial.Validators;
 using System.Reflection;
 
@@ -19,7 +20,7 @@ builder.Services.AddFluentValidation((options) =>
     options.RegisterValidatorsFromAssembly(Assembly.GetExecutingAssembly())
 );
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
-builder.Services.AddTransient<IDBRepositoryClub,DBRepositoryClub>();
+builder.Services.AddTransient<IDBRepositorySocio,DBRepositorySocio>();
 builder.Services.AddDbContext<ClubContext>((context) =>
 {
     context.UseSqlServer(builder.Configuration.GetConnectionString("UserConnectionStrings"));

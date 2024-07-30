@@ -3,15 +3,16 @@ using Microsoft.EntityFrameworkCore;
 using secondParcial.Contexto;
 using secondParcial.DTOS;
 using secondParcial.Model;
+using secondParcial.Repositories.Interfaces;
 
-namespace secondParcial.Repositories
+namespace secondParcial.Repositories.Impl
 {
-    public class DBRepositoryClub : IDBRepositoryClub
+    public class DBRepositorySocio : IServicio
     {
         public readonly ClubContext _clubContext;
         private readonly IMapper _mapper;
 
-        public DBRepositoryClub(ClubContext clubContext, IMapper mapper)
+        public DBRepositorySocio(ClubContext clubContext, IMapper mapper)
         {
             _clubContext = clubContext;
             _mapper = mapper;
@@ -20,7 +21,7 @@ namespace secondParcial.Repositories
         {
             //el id de socio (guid) no es identity, obliga a insertar un nuevo gui desde el back
 
-            var socioExist = await _clubContext.Socios.FirstOrDefaultAsync(s=> s.Dni == dTORequest.Dni);
+            var socioExist = await _clubContext.Socios.FirstOrDefaultAsync(s => s.Dni == dTORequest.Dni);
             if (socioExist != null)
             {
                 return null;
@@ -36,7 +37,7 @@ namespace secondParcial.Repositories
                 socioResponse.Id = socioEntity.Id;
                 return socioResponse;
             }
-           
+
         }
 
         public async Task<List<SocioDTOResponse>> GetAllSociosAsync()
@@ -46,14 +47,10 @@ namespace secondParcial.Repositories
            .Where(s => s.Activo).ToListAsync();
 
             var sociosResponse = _mapper.Map<List<SocioDTOResponse>>(socios);
- 
+
             return sociosResponse;
         }
-        public async Task<Deporte> GetDeporteByIdAsync(Guid id)
-        {
-            var deporte = await _clubContext.Deportes.FirstOrDefaultAsync(x => x.Id == id);
-            return deporte;
-        }
+       
 
         public async Task<SocioDTOResponse> GetByIdSocioAsync(Guid id)
         {

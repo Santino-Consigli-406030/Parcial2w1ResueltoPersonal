@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using secondParcial.DTOS;
-using secondParcial.Repositories;
+using secondParcial.Repositories.Interfaces;
 using System.Net;
 
 namespace secondParcial.Controllers
@@ -11,18 +11,18 @@ namespace secondParcial.Controllers
     [ApiController]
     public class Parcial : ControllerBase
     {
-        private readonly IDBRepositoryClub _dbRepositoryClub;
+        private readonly IServicio _servicio;
         private readonly IMapper _mapper;
-       public Parcial(IDBRepositoryClub repository ,IMapper mapper)
+       public Parcial(IServicio repository ,IMapper mapper)
         {
-            _dbRepositoryClub = repository;
+            _servicio = repository;
             _mapper = mapper;
         }
         [HttpPost("postOne")]
         public async Task<IActionResult> CreateSocio([FromBody] SocioPostDTORequest dTORequest)
         {
 
-            var response = await _dbRepositoryClub.CreateSocioAsync(dTORequest);
+            var response = await _servicio.CreateSocioAsync(dTORequest);
             if(response==null)
             {
                 return Conflict(new { message = "El socio ya existe." });
@@ -34,7 +34,7 @@ namespace secondParcial.Controllers
         public async Task<IActionResult> GetByIdSocio([FromHeader]Guid id)
         {
 
-            var response = await _dbRepositoryClub.GetByIdSocioAsync(id);
+            var response = await _servicio.GetByIdSocioAsync(id);
            
 
             return Ok(response);
@@ -44,14 +44,14 @@ namespace secondParcial.Controllers
         public async Task<IActionResult> GetAllSocios()
         {
 
-            var socios = await _dbRepositoryClub.GetAllSociosAsync();
+            var socios = await _servicio.GetAllSociosAsync();
             return Ok(socios);
         }
         [HttpGet("getAllDeportes")]
         public async Task<IActionResult> GetAllDeportes()
         {
 
-            var response = await _dbRepositoryClub.GetAllDeportesAsync();
+            var response = await _servicio.GetAllDeportesAsync();
 
             return Ok(response);
         }
@@ -59,7 +59,7 @@ namespace secondParcial.Controllers
         public async Task<IActionResult> GetDeporteById(Guid id )
         {
 
-            var response = await _dbRepositoryClub.GetDeporteByIdAsync(id);
+            var response = await _servicio.GetDeporteByIdAsync(id);
 
             return Ok(response);
         }
