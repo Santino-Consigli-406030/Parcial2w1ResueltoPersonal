@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using secondParcial.DTOS;
 using secondParcial.Repositories.Interfaces;
+using secondParcial.Servicios.Interfaces;
 using System.Net;
 
 namespace secondParcial.Controllers
@@ -22,7 +23,7 @@ namespace secondParcial.Controllers
         public async Task<IActionResult> CreateSocio([FromBody] SocioPostDTORequest dTORequest)
         {
 
-            var response = await _servicio.CreateSocioAsync(dTORequest);
+            var response = await _servicio.CreateSocio(dTORequest);
             if(response==null)
             {
                 return Conflict(new { message = "El socio ya existe." });
@@ -34,7 +35,7 @@ namespace secondParcial.Controllers
         public async Task<IActionResult> GetByIdSocio([FromHeader]Guid id)
         {
 
-            var response = await _servicio.GetByIdSocioAsync(id);
+            var response = await _servicio.GetSocioById(id);
            
 
             return Ok(response);
@@ -44,23 +45,21 @@ namespace secondParcial.Controllers
         public async Task<IActionResult> GetAllSocios()
         {
 
-            var socios = await _servicio.GetAllSociosAsync();
+            var socios = await _servicio.GetAllSocios();
             return Ok(socios);
         }
         [HttpGet("getAllDeportes")]
         public async Task<IActionResult> GetAllDeportes()
         {
 
-            var response = await _servicio.GetAllDeportesAsync();
+            var response = await _servicio.GetAllDeportes();
 
             return Ok(response);
         }
         [HttpGet("getDeporteById/{id}")]
         public async Task<IActionResult> GetDeporteById(Guid id )
         {
-
-            var response = await _servicio.GetDeporteByIdAsync(id);
-
+            var response = await _servicio.GetDeporteById(id);
             return Ok(response);
         }
 

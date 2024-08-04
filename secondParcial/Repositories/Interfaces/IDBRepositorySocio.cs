@@ -3,10 +3,8 @@ using secondParcial.Model;
 
 namespace secondParcial.Repositories.Interfaces
 {
-    public interface IServicio
+    public interface IDBRepositorySocio
     {
-        Task<Deporte> GetDeporteByIdAsync(Guid id);
-        Task<List<Deporte>> GetAllDeportesAsync();
         Task<SocioPostDTOResponse> CreateSocioAsync(SocioPostDTORequest dTORequest);
         Task<List<SocioDTOResponse>> GetAllSociosAsync();
         Task<SocioDTOResponse> GetByIdSocioAsync(Guid id);

@@ -7,7 +7,7 @@ using secondParcial.Repositories.Interfaces;
 
 namespace secondParcial.Repositories.Impl
 {
-    public class DBRepositorySocio : IServicio
+    public class DBRepositorySocio:IDBRepositorySocio
     {
         public readonly ClubContext _clubContext;
         private readonly IMapper _mapper;
@@ -64,11 +64,8 @@ namespace secondParcial.Repositories.Impl
 
             return socioResponse;
         }
-        public async Task<List<Deporte>> GetAllDeportesAsync()
-        {
-            var deportes = await _clubContext.Deportes.ToListAsync();
-            return deportes;
-        }
+        
 
+       
     }
 }

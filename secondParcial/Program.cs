@@ -5,6 +5,8 @@ using secondParcial.Contexto;
 using secondParcial.DTOS;
 using secondParcial.Repositories.Impl;
 using secondParcial.Repositories.Interfaces;
+using secondParcial.Servicios.Impl;
+using secondParcial.Servicios.Interfaces;
 using secondParcial.Validators;
 using System.Reflection;
 
@@ -21,6 +23,8 @@ builder.Services.AddFluentValidation((options) =>
 );
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 builder.Services.AddTransient<IDBRepositorySocio,DBRepositorySocio>();
+builder.Services.AddTransient<IDBRepositoryDeporte, DBRepositoryDeporte>();
+builder.Services.AddTransient<IServicio, Servicio>();
 builder.Services.AddDbContext<ClubContext>((context) =>
 {
     context.UseSqlServer(builder.Configuration.GetConnectionString("UserConnectionStrings"));

@@ -5,7 +5,10 @@ namespace secondParcial.Servicios.Interfaces
 {
     public interface IServicio
     {
-        Task<DeporteDTO> GetDeporteByIdAsync(Guid id);
-        Task<List<DeporteDTO>> GetAllDeportesAsync();
+        Task<SocioPostDTOResponse> CreateSocio(SocioPostDTORequest dTORequest);
+        Task<List<SocioDTOResponse>> GetAllSocios();
+        Task<SocioDTOResponse> GetSocioById(Guid id);
+        Task<DeporteDTO> GetDeporteById(Guid id);
+        Task<List<DeporteDTO>> GetAllDeportes();
     }
 }

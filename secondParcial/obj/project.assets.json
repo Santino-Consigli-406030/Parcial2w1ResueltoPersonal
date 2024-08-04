@@ -2573,23 +2573,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\maric\\.nuget\\packages\\": {},
+    "C:\\Users\\Santino\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\maric\\OneDrive\\Escritorio\\Santino Documentos\\ProgramacionIII\\Parcial2w1ResueltoPersonal\\secondParcial\\secondParcial.csproj",
+      "projectUniqueName": "C:\\Users\\Santino\\Desktop\\Facultad2024\\ProgramacionIII\\dataPracticaParcia2PrograIII\\second-exam-practica\\secondParcial\\secondParcial.csproj",
       "projectName": "secondParcial",
-      "projectPath": "C:\\Users\\maric\\OneDrive\\Escritorio\\Santino Documentos\\ProgramacionIII\\Parcial2w1ResueltoPersonal\\secondParcial\\secondParcial.csproj",
-      "packagesPath": "C:\\Users\\maric\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\maric\\OneDrive\\Escritorio\\Santino Documentos\\ProgramacionIII\\Parcial2w1ResueltoPersonal\\secondParcial\\obj\\",
+      "projectPath": "C:\\Users\\Santino\\Desktop\\Facultad2024\\ProgramacionIII\\dataPracticaParcia2PrograIII\\second-exam-practica\\secondParcial\\secondParcial.csproj",
+      "packagesPath": "C:\\Users\\Santino\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Santino\\Desktop\\Facultad2024\\ProgramacionIII\\dataPracticaParcia2PrograIII\\second-exam-practica\\secondParcial\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\maric\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Santino\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2598,7 +2598,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
